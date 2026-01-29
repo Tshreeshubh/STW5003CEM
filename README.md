@@ -207,9 +207,7 @@ The portfolio runner also:
 	•	Prevents runtime crashes
 	•	Displays algorithm reflections for academic evaluation
 
-⸻
 
-⸻
 
 📊 Learning Outcomes Demonstrated
 	•	Algorithm Design & Analysis
