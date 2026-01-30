@@ -103,3 +103,21 @@ if __name__ == "__main__":
     print(f"  > Centers: {res_1} (Expected: 1)")
     if res_1 == 1: print("  > STATUS: PASS")
     else: print("  > STATUS: FAIL")
+
+    # Test Case 2: From PDF Brief
+    # Input: {0,0, null, 0, null, 0, null, null, 0}
+    # This represents a tree structure that typically requires 2 centers.
+    # Constructing a structure: Root -> Left -> Left -> Right -> Right (Depth 5 chain-like)
+    root_2 = TreeNode(0)
+    root_2.left = TreeNode(0)
+    root_2.left.left = TreeNode(0)
+    root_2.left.left.right = TreeNode(0)
+    root_2.left.left.right.right = TreeNode(0)
+    
+    res_2 = solver.min_service_centers(root_2)
+    print(f"\nTest Case 2 (Complex Tree from PDF):")
+    print(f"  > Centers: {res_2} (Expected: 2)")
+    if res_2 == 2: print("  > STATUS: PASS")
+    else: print("  > STATUS: FAIL")
+
+    print("\nAll validation tests complete.")

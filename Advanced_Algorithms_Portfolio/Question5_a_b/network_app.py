@@ -209,7 +209,7 @@ class EmergencyApp:
         ctrl.pack(side=tk.TOP)
         tk.Label(ctrl, text="Command Chain Optimization (BST Rebalancing)", font=("Arial", 12, "bold")).pack()
         tk.Button(ctrl, text="Optimize Hierarchy", bg="orange", command=self.optimize_tree).pack(pady=5)
-        self.tree_canvas = tk.Canvas(self.tab_tree, bg="white")
+        self.tree_canvas = tk.Canvas(self.tab_tree, bg="red")
         self.tree_canvas.pack(fill=tk.BOTH, expand=True)
 
     def draw_graph(self, mst_edges=None, highlighted_paths=None, zone_colors=None):
@@ -328,7 +328,7 @@ class EmergencyApp:
         def _draw(node, x, y, dx):
             if not node: return
             r = 18
-            self.tree_canvas.create_oval(x-r, y-r, x+r, y+r, fill="#90ee90", outline="black")
+            self.tree_canvas.create_oval(x-r, y-r, x+r, y+r, fill="#041104", outline="red")
             self.tree_canvas.create_text(x, y, text=str(node.val))
             if node.left:
                 self.tree_canvas.create_line(x, y+r, x-dx, y+60-r)
